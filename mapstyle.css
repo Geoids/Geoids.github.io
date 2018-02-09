@@ -68,8 +68,23 @@ body {
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
+@media (max-width: 100px) {
     .column.side, .column.middle {
         width: 100%;
     }
 }
+.distance{
+    background:url(distanceimg.png) no-repeat; 
+    cursor:pointer;
+    border:none;
+    width:580px;
+    height:150px;
+
+  }
+
+  .distance:active {
+    background:url(distanceimg.png) no-repeat;
+    background-color:;
+  }
+  
+  
