@@ -19,28 +19,7 @@ hg2 {
 	font-family: aniron;, sans-serif; font-weight:normal;
 }
 
-@font-face {
-    font-family: aniron;
-	font-size: 30px;
-    src: url(anirm___.ttf);
-}
 
-h3 {
-	font-family: aniron;, sans-serif; font-size: 18px; font-weight:normal;
-}
-@font-face {
-    font-family: aniron;
-	font-size: 30px;
-    src: url(anirb___.ttf);
-}
-
-h4 {
-	font-family: aniron;, sans-serif; font-size: 10px; font-weight:normal;
-}
-
-* {
-    box-sizing: border-box;
-}
 
 body {
   margin: 0;
