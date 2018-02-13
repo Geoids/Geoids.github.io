@@ -14,24 +14,17 @@
 </style>
 <link rel="stylesheet" href="https://js.arcgis.com/4.6/esri/css/main.css">
 <script src="https://js.arcgis.com/4.6/"></script>
-<script>
+<script language="javascript">
 
 require([
   "esri/Map",
+  "esri/layers/MapImageLayer",
   "esri/views/MapView",
   "dojo/domReady!"
-], function(Map, MapView){
-  var map = new Map({
+], function(Map, MapImageLayer, MapView){
+var map = new Map({
     basemap: "streets"
   });
-  var view = new MapView({
-    container: "viewDiv",  // Reference to the scene div created in step 5
-    map: map,  // Reference to the map object created before the scene
-    zoom: 5,  // Sets zoom level based on level of detail (LOD)
-    center: [39.3210, 111.0937]  // Sets center point of view using longitude,latitude
-  });
-});
-require(["esri/layers/MapImageLayer"], function(MapImageLayer){
 var rast_layer = new MapImageLayer({
 url: "http://geoserver2.byu.edu/arcgis/rest/services/Geoids/RoadsRaster/MapServer"
 });
@@ -41,13 +34,14 @@ url: "http://geoserver2.byu.edu/arcgis/rest/services/Geoids/UtahAADT/MapServer"
 map.layers.add(rast_layer);
 map.layers.add(vect_layer);
 var view = new MapView({
-container: "viewDiv",
-map: map,
-center: [-111.1, 39.1],
-zoom: 6
+    container: "viewDiv",  // Reference to the scene div created in step 5
+    map: map,  // Reference to the map object created before the scene
+    zoom: 7,  // Sets zoom level based on level of detail (LOD)
+    center: [-111, 39]  // Sets center point of view using longitude,latitude
+  });
 });
-  
-  
+
+
 </script>
 </head>
 <body>
