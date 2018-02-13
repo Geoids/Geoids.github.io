@@ -83,8 +83,8 @@ body {
   }
 
   .distance:active {
-    background:url(gotomapimg.png) no-repeat;
+    background:url(map.js) no-repeat;
     background-color:;
   }
   
-  
+  <distance onclick="map.js.href='/page2'">Continue</distance>
