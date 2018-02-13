@@ -74,7 +74,7 @@ body {
     }
 }
 .distance{
-    background:url(distanceimg.png) no-repeat; 
+    background:url(gotomapimg.png) no-repeat; 
     cursor:pointer;
     border:none;
     width:580px;
@@ -83,7 +83,7 @@ body {
   }
 
   .distance:active {
-    background:url(distanceimg.png) no-repeat;
+    background:url(gotomapimg.png) no-repeat;
     background-color:;
   }
   
