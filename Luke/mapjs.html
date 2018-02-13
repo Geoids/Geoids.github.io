@@ -27,18 +27,27 @@ require([
   var view = new MapView({
     container: "viewDiv",  // Reference to the scene div created in step 5
     map: map,  // Reference to the map object created before the scene
-    zoom: 4,  // Sets zoom level based on level of detail (LOD)
+    zoom: 5,  // Sets zoom level based on level of detail (LOD)
     center: [39.3210, 111.0937]  // Sets center point of view using longitude,latitude
   });
 });
 require(["esri/layers/MapImageLayer"], function(MapImageLayer){
-  // points to the states layer in a service storing U.S. census data
-  var layer = new MapImageLayer({
-    url: "http://geoserver2.byu.edu/arcgis/rest/services/Geoids/UtahAADT/MapServer"
-"
-  });
-  map.add(layer);  // adds the layer to the map
+var rast_layer = new MapImageLayer({
+url: "http://geoserver2.byu.edu/arcgis/rest/services/Geoids/RoadsRaster/MapServer"
 });
+var vect_layer = new MapImageLayer({
+url: "http://geoserver2.byu.edu/arcgis/rest/services/Geoids/UtahAADT/MapServer"
+});
+map.layers.add(rast_layer);
+map.layers.add(vect_layer);
+var view = new MapView({
+container: "viewDiv",
+map: map,
+center: [-111.1, 39.1],
+zoom: 6
+});
+  
+  
 </script>
 </head>
 <body>
